@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Juego</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/game.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/winnerStyle.css" />
+    <link rel="stylesheet" href="./src/css/loseStyle.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Oswald:wght@200..700&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <audio
+      id="soundScreen"
+      autoplay
+      loop
+      style="position: absolute; z-index: 99; margin-left: -10%; margin-top: 2%"
+    >
+      <source src="./src/sounds/gameSong.wav" type="audio/wav" />
+    </audio>
+
+    <div id="MenuScreen" style="display: block">
+      <span class="jittery"> MI   PORTAFOLIO </span>
+      <h1 class="Cname">CARLOS FERNANDO CORTÉS SANDOVAL</h1>
+
+      <div class="container">
+        <div class="game">
+          <button id="playGame" onclick="loadSceen(2)">Play!</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="PauseScreen" style="display: none">
+      <button onclick="loadSceen(1)">Home</button>
+      <button onclick="loadSceen(3)">Contact</button>
+      
+    </div>
+
+    <div id="gameScreen" style="display: none">
+     
+      <div id="container"></div>
+
+      <!-- <div class="box lives-box">
+            <div id="lifeline" class="lives">...</div>
+        </div> -->
+    </div>
+
+    <div id="WinnerScreen" style="display: none">
+      <span> REDES SOCIALES</span>
+      <div class="container">
+        <div class="game">
+          <button id="playAgain" onclick="loadSceen(2)">Play again!</button>
+        </div>
+        
+        
+        <div class="social-links">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="social-link instagram">
+            <img src="./src/img/insta.png" alt="Instagram">
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="social-link facebook">
+            <img src="./src/img/face.png" alt="Facebook">
+            <span>Facebook</span>
+          </a>
+          <a href="https://x.com/home" target="_blank" rel="noopener" class="social-link twitter">
+            <img src="./src/img/X_icon.png" alt="Twitter">
+            <span>Twitter</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+      </div>
+    </div>
+
+    <div id="LoserScreen" style="display: none">
+      <span> Game Over</span>
+      <div class="container">
+        <div class="game">
+          <button id="playAgain2" onclick="loadSceen(2)">Play again!</button>
+        </div>
+      </div>
+
+      <div class="containerLose">
+        <div class="sky">
+          <div class="stars"></div>
+          <div class="stars1"></div>
+          <div class="stars2"></div>
+          <div class="shooting-stars"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/js/animationLetters.js"></script>
+    <script type="module" src="./src/js/game.js"></script>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Cname{
+    font-family: "Press Start 2P", monospace;
+    font-size: 1em;
+    color: #f7f6f3;
+    margin-top: 20px;
+    }
+.gameScreen{
+    width: 200px;
+}
+
+body {
+    font-family: "Press Start 2P", monospace;
+    font-size: 1em;
+    text-align: center;
+}
+
+#MenuScreen {
+    
+    background-image: url('../img/fondo.jpg'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #f7f6f3;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+
+
+#WinnerScreen{
+    background-image: url('../img/fondo.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    padding-top: 10%;
+}
+
+/* Estilos para los enlaces de redes sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #f7f6f3;
+    transition: transform 0.2s;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.social-link img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5em;
+}
+
+.social-link span {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.8em;
+    padding-top: 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#LoserScreen{
+    color: #f7f6f3;
+    height: 100vh;
+    padding-top: 10%;
+    z-index: 1 !important;
+}
+
+span {
+    font: 100 80px/1em "Press Start 2P", sans-serif;
+    font-style: normal;
+    padding-top: 140px;
+}
+
+.jittery span {
+    animation: jitter 200ms linear infinite;
+    color: #ffffff;
+    display: inline-block;
+}
+
+
+@keyframes jitter {
+    50% {
+        transform: skewY(0.7deg) skewX(-0.7deg) scale(1.006);
+    }
+}
+
+button {
+  background: #e8875e;
+  border: 5px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 9px #925237;
+  color: #f7f6f3;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 14px; /* 🔹 solo el texto cambia */
+  margin: 0 auto 0.5em;
+  outline: none;
+  padding: 12px 24px; /* 🔹 tamaño fijo del botón */
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  width: 250px; /* 🔹 tamaño fijo */
+}
+
+
+button:disabled {
+    background: #915338 repeating-linear-gradient(45deg, transparent, transparent 1em, rgba(255, 255, 255, 0.1) 1em, rgba(255, 255, 255, 0.1) 2em);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+button:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.game span {
+    position: relative;
+    right: 0;
+}
+
+.box {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2em auto;
+    padding: 1em 2em;
+    width: 15em;
+}
+
+.lives-box {
+    padding: 0;
+}
+
+.lives {
+    font-size: 3em;
+}
+
+.stats {
+    background: #eccaaf;
+    border: 0.3em #a33d62 solid;
+    color: #a33d62;
+    line-height: 1.8;
+    margin: 2em;
+    padding: 1em;
+}
+
+h3 {
+    padding: 0.5em;
+    text-decoration: underline;
+}
+
+.box .counter {
+    text-align: left;
+}
+
+.container {
+    align-items: center;
+    margin-top: 4%;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* min-height: 100vh; */
+    text-align: center;
+}
+
+.game {
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.counter {
+    position: absolute;
+    right: 0;
+}
+
+.points-box {
+    background: #f45689;
+}
+
+.score-box {
+    background: #f4a262;
+}
+
+.player-box {
+    background: #9f81c1;
+}
+
+.lives-box {
+    background: #ff7575;
+}
+
+#PauseScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; /* botones uno debajo del otro */
+  align-items: center; /* centra los botones horizontalmente */
+  gap: 20px; /* separación entre botones */
+}
