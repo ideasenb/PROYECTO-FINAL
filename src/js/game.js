@@ -666,6 +666,32 @@ scene.add( planeHVLET );
 planeHVLET.rotation.set(0,Math.PI/2,0);
 planeHVLET.position.set(-30, 3, -18);
 
+const DIB1 = bio.load('./src/img/DIB1.png');
+const geometryDIB1 = new THREE.PlaneGeometry( 3, 3 );
+const materialDIB1 = new THREE.MeshBasicMaterial( { map: DIB1,  transparent: true} );
+const planeDIB1 = new THREE.Mesh( geometryDIB1, materialDIB1 );
+scene.add( planeDIB1 );
+planeDIB1.rotation.set(0,-Math.PI,0);
+planeDIB1.position.set(26, 0.56, -45);
+
+const DIB2 = bio.load('./src/img/DIB2.png');
+const geometryDIB2 = new THREE.PlaneGeometry( 3, 3 );
+const materialDIB2 = new THREE.MeshBasicMaterial( { map: DIB2,  transparent: true} );
+const planeDIB2 = new THREE.Mesh( geometryDIB2, materialDIB2 );
+scene.add( planeDIB2 );
+planeDIB2.rotation.set(0,-Math.PI,0);
+planeDIB2.position.set(22, 0.56, -45);
+
+const DIB3 = bio.load('./src/img/DIB3.png');
+const geometryDIB3 = new THREE.PlaneGeometry( 3, 3 );
+const materialDIB3 = new THREE.MeshBasicMaterial( { map: DIB3,  transparent: true} );
+const planeDIB3 = new THREE.Mesh( geometryDIB3, materialDIB3 );
+scene.add( planeDIB3 );
+planeDIB3.rotation.set(0,-Math.PI,0);
+planeDIB3.position.set(19, 0.56, -45);
+
+
+
 
 // --- VIDEO ---
 const video = document.createElement('video');
@@ -825,7 +851,7 @@ loaderp1.load( 'pinguinito.glb', ( gltf ) => {
         }
     } );
 
-    pinguinito1.position.set(13.5, -1, -45);
+    pinguinito1.position.set(13.5, -1, -47);
     pinguinito1.rotation.set(0, Math.PI, 0);
 
 } );
