@@ -169,20 +169,7 @@ function throwBall() {
 
 }
 
-// --- Mostrar coordenadas tipo Minecraft (posición de la cámara) ---
-const coordsDiv = document.createElement('div');
-coordsDiv.style.position = 'absolute';
-coordsDiv.style.top = '10px';
-coordsDiv.style.right = '10px';
-coordsDiv.style.color = 'white';
-coordsDiv.style.background = 'rgba(0,0,0,0.5)';
-coordsDiv.style.padding = '8px 12px';
-coordsDiv.style.borderRadius = '8px';
-coordsDiv.style.fontFamily = 'monospace';
-coordsDiv.style.fontSize = '14px';
-coordsDiv.style.zIndex = '10';
-coordsDiv.innerHTML = 'X: 0<br>Y: 0<br>Z: 0';
-document.body.appendChild(coordsDiv);
+
 
 
 function playerCollisions() {
@@ -986,12 +973,7 @@ function teleportPlayerFrom4to2() {
 
 function animate() {
 
-     // Actualiza las coordenadas de la cámara
-    coordsDiv.innerHTML = `
-        X: ${camera.position.x.toFixed(2)}<br>
-        Y: ${camera.position.y.toFixed(2)}<br>
-        Z: ${camera.position.z.toFixed(2)}
-    `;
+    
 
     const deltaTime = Math.min( 0.05, clock.getDelta() ) / STEPS_PER_FRAME;
 
